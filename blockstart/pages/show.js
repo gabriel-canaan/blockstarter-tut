@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default () => {
-  return <h1>Show !</h1>;
+  return <h1>show</h1>;
 };
