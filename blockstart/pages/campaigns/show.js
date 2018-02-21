@@ -53,28 +53,30 @@ class CampaignShow extends Component {
   }
 
   render() {
-    return (<Layout>
-      <h3>CampaignShow</h3>
-      <Grid>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            {this.renderCards()}
-          </Grid.Column>
-          <Grid.Column width={6}>
-            <ContributeForm address={this.props.address}/>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <Link route={`/campaigns/${this.props.address}/requests`}>
-            <a>
-              <Button primary="primary">View Requests</Button>
-            </a>
-          </Link>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Layout>);
+    return (
+      <Layout>
+        <h3>CampaignShow</h3>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column width={10}>
+              {this.renderCards()}
+            </Grid.Column>
+            <Grid.Column width={6}>
+              <ContributeForm address={this.props.address}/>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Link route={`/campaigns/${this.props.address}/requests`}>
+              <a>
+                <Button primary>View Requests</Button>
+              </a>
+            </Link>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Layout>
+    );
   }
 }
 export default CampaignShow;
