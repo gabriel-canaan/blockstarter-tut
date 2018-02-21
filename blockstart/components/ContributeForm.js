@@ -32,16 +32,18 @@ class ContributeForm extends Component {
   };
 
   render() {
-    return (<Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
-      <Form.Field>
-        <label>Amount to Contribute</label>
-        <Input value={this.state.value} onChange={event => this.setState({value: event.target.value})} label='ether' labelPosition='right'/>
-      </Form.Field>
-      <Message error header='Noteven aow!'                content={this.state.errorMessage}/>
-      <Button primary loading={this.state.loading}>
+    return (
+      <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+        <Form.Field>
+          <label>Amount to Contribute</label>
+          <Input value={this.state.value} onChange={event => this.setState({value: event.target.value})} label='ether' labelPosition='right'/>
+        </Form.Field>
+        <Message error header='Noteven aow!'                content={this.state.errorMessage}/>
+        <Button primary loading={this.state.loading}>
         Contribute!
-      </Button>
-    </Form>)
+        </Button>
+      </Form>
+    );
   }
 }
 
